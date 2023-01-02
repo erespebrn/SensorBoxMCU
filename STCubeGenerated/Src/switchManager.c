@@ -57,7 +57,7 @@ static const switchConfig_t current =
   .Radiometric = false,
   .Port_EN     = false,
   .DIV_EN      = true,
-  .R10k_EN     = true,
+  .R10k_EN     = false,
   .R200_EN     = true
 };
 
@@ -82,7 +82,8 @@ void switchManager_setConfig(config_t config, portNo_t portNo)
       writeConfig(&pt1000, portNo);
       break;
     }
-    case CONFIG_NTC:
+    case CONFIG_NTC_5K:
+    case CONFIG_NTC_10K:
     {
       writeConfig(&ntc, portNo);
       break;

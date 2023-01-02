@@ -69,7 +69,8 @@ void adcManager_setConfig(config_t config, portNo_t portNo)
   switch (config)
   {
     case CONFIG_PT1000:
-    case CONFIG_NTC:
+    case CONFIG_NTC_5K:
+    case CONFIG_NTC_10K:
     case CONFIG_VOLTAGE:
     case CONFIG_DISABLE:
     case CONFIG_CURRENT:
